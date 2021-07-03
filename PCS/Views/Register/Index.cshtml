@@ -1,0 +1,261 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Register.cshtml";
+}
+<!-- Main content Start -->
+<div class="main-content">
+    <!-- Contact Section Start -->
+    <div id="rs-register" class="rs-contact style1 gray-bg pt-100 pb-100 md-pt-80 md-pb-80">
+        <div class="container">
+            <div class="white-bg">
+                
+                <div class="row">
+                    
+                    <div class="col-lg-12 form-part">
+                        <div class="sec-title mb-35 md-mb-30">
+                            <h2 class="title mb-0">REGISTRATION FORM</h2>
+
+                        </div>
+                        <div id="form-messages"></div>
+                        <div class="col-md-12 text-right">
+                            <a href="~/Content/RegForm/registration form 21st.docx" class="btn btn-primary text-right" style="margin-top:-30px">Download Sample File</a>
+                            <a onclick="printJS('printJS-form', 'html')" class="btn btn-primary text-right" style="margin-top:-30px"><i class="fa fa-print mr-1"></i> Print </a>
+                        </div>
+
+                        <form id="printJS-form" class="contact-form" method="post" action="#">
+                            <div class="row">
+                                <div class="col-md-3 mb-30">
+                                    <div class="common-control">
+                                        <input type="text" name="Title" placeholder="Title:    Dr./Mr./Mrs./Ms." required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-30">
+                                    <div class="common-control">
+                                        <input type="text" name="Name" placeholder="Name..." required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-30">
+                                    <div class="common-control">
+                                        <input type="text" name="CNIC" placeholder="CNIC #..." required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-30">
+                                    <div class="common-control">
+                                        <input type="text" name="Designation" placeholder="Designation..." required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-30">
+                                    <div class="common-control">
+                                        <input type="text" name="Hospital" placeholder="Hospital..." required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-30">
+                                    <div class="common-control">
+                                        <input type="email" name="Email" placeholder="Preferred Mailing Address..." required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-30">
+                                    <div class="common-control">
+                                        <input type="email" name="Email1" placeholder="E-mail Address..." required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-30">
+                                    <div class="common-control">
+                                        <input type="number" name="TelHospital" placeholder="Hospital(051-000000)" required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-30">
+                                    <div class="common-control">
+                                        <input type="number" name="TelClinic" placeholder="Clinic(051-000000)" required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-30">
+                                    <div class="common-control">
+                                        <input type="number" name="TelRes" placeholder="Res(051-000000)" required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-30">
+                                    <div class="common-control">
+                                        <input type="number" name="Mobile" placeholder="Mobile(923012345678)" required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-30">
+                                    <div class="common-control">
+                                        <input type="text" name="PMDC" placeholder="PMDC#" required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-30">
+                                    <div class="common-control">
+                                        <input type="text" name="Badge" placeholder="I would like my title and name to appear on the badge as" required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-30">
+                                    <div class="common-control">
+                                        <label><b>Arrival Date Time</b></label>
+                                        <input type="datetime-local" name="ArrivalDt" placeholder="" required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-30">
+                                    <div class="common-control">
+                                        <label><b>Departure Date Time</b></label>
+                                        <input type="datetime-local" name="DepartureDt" placeholder="" required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-30">
+                                    <div class="common-control">
+                                        <label><b>Number of Nights</b></label>
+                                        <input type="number" name="Nights" value="0" placeholder="" required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-30">
+                                    <div class="common-control">
+                                        <label><b>Number of Rooms</b></label>
+                                        <input type="number" name="Room" placeholder="" value="0" required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-30">
+                                    <div class="common-control">
+                                        <label><b>Fee (Delegate)</b></label>
+                                        <input type="number" name="FeeDelegate" id="FeeDelegate" onkeyup="sum();" value="0" placeholder="Rs:..." required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-30">
+                                    <div class="common-control">
+                                        <label><b>Hotel Reservation</b></label>
+                                        <input type="number" name="FeePerson" id="Hotel" onkeyup="sum();" value="0" placeholder="Rs:..." required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-30">
+                                    <div class="common-control">
+                                        <label><b>Total</b></label>
+                                        <input type="number" name="Total" id="Total" readonly="" value="0" required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="submit-btn">
+                                        <button type="submit" class="readon">Submit Now</button>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </form>
+                        <div class="col-md-12" style="margin-top:-50px">
+                            <!-- Fees Section Start -->
+                            <div class="rs-faq inner pt-92 md-pt-72 pb-100 md-pb-80">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-8 pr-55 md-pr-15 md-mb-30">
+                                            <div id="accordion" class="accordion">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <a class="card-link" data-toggle="collapse" href="#collapseOne">Registration Fee</a>
+                                                    </div>
+                                                    <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                                                        <div class="card-body">
+                                                            <h4><b>Delegate :</b> Rs. 40,000</h4>
+                                                            <h4><b>Junior Registrar/ Residence :</b> Rs. 25,000</h4>
+                                                            <h4><b>Pharmaceutical Representative:</b> Rs. 25,000</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">Hotel Reservation (PC BHURBAN)</a>
+                                                    </div>
+                                                    <div id="collapseFour" class="collapse" data-parent="#accordion">
+                                                        <div class="card-body">
+                                                            <h4><b>Room per night for Single Room Including Tax:</b> Rs. 30,000</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fees Section End -->
+                        </div>
+                        <div class="col-md-12" style="margin-top:-50px">
+                            <!-- Fees Section Start -->
+                            <div class="rs-faq inner pt-92 md-pt-72 pb-100 md-pb-80">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-12 pr-55 md-pr-15 md-mb-30">
+                                            <div id="accordion" class="accordion">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <a class="card-link" data-toggle="collapse" href="#collapseNote">Note</a>
+                                                    </div>
+                                                    <div id="collapseNote" class="collapse show" data-parent="#accordion">
+                                                        <div class="card-body">
+                                                            <ul class="listing-style2 modify ml-20 mb-28">
+                                                                <li>Photocopies of this form can also be used for registration.</li>
+                                                                <li>
+                                                                    Due to limited accommodation at PC Bhurban all rooms are likely to be booked early.
+                                                                    Rooms will be booked on first come first serve basis. Other delegates will be accommodated in other hotels in murree. Accommodation can only be booked on receipt of hotel charges in advance. This is not refundable .Due to Limited No of Rooms only one room/ Doctor will be allowed priority to faculty members and speakers will be given.
+                                                                </li>
+                                                                <li>All Pharmaceutical Representative to be registered.</li>
+                                                                <li>Registration will include Lunch+ Dinner (Saturday) for Delegate+ Accompanying person for Saturday.</li>
+                                                                <li>Rooms confirmation will be finalized after full payment of room rent in advance.</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fees Section End -->
+                            <!-- Blog Section Start -->
+                            <div class="rs-blog inner single pt-100 pb-100 md-pt-80 md-pb-80" style="margin-top:-90px">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="blog-part">
+                                                <div class="article-content shadow mb-60">
+                                                    <p class="markup-text mb-35 text-center">
+                                                        <span>Please enclose a bank draft in the name of “21st Annual Cardiology Update” and mail to the Conference Secretariat.</span>
+                                                        <span>CONFERENCE SECRETARIAT</span>
+                                                        <br />
+                                                        <span>Department of Cardiology</span>
+                                                        <br />
+                                                        <span>Pakistan Institute of Medical Sciences, Islamabad</span>
+                                                        <br />
+                                                        <span>Ph:# +92-51-9260330 Email: cardiologyupdate21@gmail.com</span>
+                                                        <br />
+                                                        <span>Whatsapp Group: cardiologyupdate, whatsapp # +92-321-5034320</span>
+                                                    </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Blog Section End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Section End -->
+
+</div>
+<!-- Main content End -->
+<script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
+<link href="https://printjs-4de6.kxcdn.com/print.min.css" rel="stylesheet" />
+<script>
+
+    function sum() {
+        var FeeDelegate = document.getElementById("FeeDelegate").value;
+        var FeeAcc = document.getElementById("FeeAcc").value;
+        var Hotel = document.getElementById("Hotel").value;
+        var Total = parseFloat(FeeDelegate) + parseFloat(FeeAcc) + parseFloat(Hotel);
+        document.getElementById("Total").value = Total;
+    }
+</script>
