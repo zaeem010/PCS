@@ -108,7 +108,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-lg-12 text-right" style="margin-top:-17px">
+                        <div class="col-lg-12" style="margin-top:-17px">
                             <div class="rs-menu-area">
                                 <div class="main-menu">
                                     <div class="mobile-menu">
@@ -119,50 +119,57 @@
                                     <nav class="rs-menu pr-65">
                                         <ul class="nav-menu">
                                             <li class="menu-item-has-children">
-                                                <a href="@Url.Action("Index","Main")#rs-team">Orgranizers</a>
+                                                <a href="@Url.Action("Index","Aboutus")" class="fn">About Us</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="@Url.Action("Index","Aboutus")#rs-team"> About Us</a></li>
+
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item-has-children">
+                                                <a href="@Url.Action("Index","Main")#rs-team" class="fn">Orgranizers</a>
                                                 <ul class="sub-menu">
                                                     <li><a href="@Url.Action("Index","Main")#rs-team"> organizing Committee</a></li>
 
                                                 </ul>
                                             </li>
                                             <li class="menu-item-has-children">
-                                                <a href="@Url.Action("Index","Main")#rs-Part">Partners</a>
+                                                <a href="@Url.Action("Index","Main")#rs-Part" class="fn">Partners</a>
                                                 <ul class="sub-menu">
                                                     <li class="last-item"><a href="@Url.Action("Index","Main")#rs-Part">Partners</a></li>
                                                 </ul>
                                             </li>
                                             <li class="menu-item-has-children">
-                                                <a href="@Url.Action("Index","Main")#rs-faculty">Faculties</a>
+                                                <a href="@Url.Action("Index","Main")#rs-faculty" class="fn">Faculties</a>
                                                 <ul class="sub-menu">
                                                     <li><a href="@Url.Action("Index","Main")#rs-faculty"> National Faculty</a></li>
                                                     <li><a href="@Url.Action("Index","Main")#rs-Infaculty"> International Faculty</a></li>
                                                 </ul>
                                             </li>
                                             <li class="menu-item-has-children">
-                                                <a href="#">Council</a>
+                                                <a href="#" class="fn">Council</a>
                                                 <ul class="sub-menu">
                                                     <li><a href="@Url.Action("PCS","Main")"> PCS Council</a></li>
                                                     <li><a href="@Url.Action("PSIC","Main")"> PCIS Council</a></li>
                                                 </ul>
                                             </li>
                                             <li class="menu-item-has-children">
-                                                <a href="#">Programme</a>
+                                                <a href="#" class="fn">Programme</a>
                                                 <ul class="sub-menu">
                                                     <li><a href="@Url.Action("Index","Main")#rs-live"> Live Sessions</a></li>
-                                                    <li class="last-item"><a href="#"> Scientific Sessions</a></li>
+                                                    <li class="last-item"><a href="@Url.Action("ScientificSession","Main")"> Scientific Sessions</a></li>
                                                     <li class="last-item"><a href="#">Live Cases</a></li>
                                                     <li class="last-item"><a href="#">WorkShops</a></li>
                                                 </ul>
                                             </li>
                                             <li class="menu-item-has-children">
-                                                <a href="#">Sponsers/Tariff</a>
+                                                <a href="#" class="fn">Sponsers/Tariff</a>
                                                 <ul class="sub-menu">
                                                     <li><a href="@Url.Action("Index","Main")#rs-sponser"> Sponsers</a></li>
                                                     <li><a href=""> Tariff</a></li>
                                                 </ul>
                                             </li>
                                             <li class="menu-item-has-children">
-                                                <a href="@Url.Action("Index","Register")">Registration</a>
+                                                <a href="@Url.Action("Index","Register")" class="fn">Registration</a>
                                                 <ul class="sub-menu">
                                                     <li><a href="@Url.Action("Index","Register")">Registration</a></li>
                                                 </ul>

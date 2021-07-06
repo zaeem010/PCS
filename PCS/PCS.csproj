@@ -658,6 +658,7 @@
     <Content Include="Content\Slider\Slide1.jpeg" />
     <Content Include="Content\Slider\Slide2.jpeg" />
     <Content Include="Content\Slider\Slide3.jpeg" />
+    <Content Include="Content\Slider\Slide4.jpeg" />
     <Content Include="Content\Slider\Sumer.jpg" />
     <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />
