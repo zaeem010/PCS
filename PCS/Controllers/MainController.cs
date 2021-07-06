@@ -39,5 +39,9 @@ namespace PCS.Controllers
         {
             return View();
         }
+        public ActionResult WorkShop()
+        {
+            return View();
+        }
     }
 }

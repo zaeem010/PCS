@@ -624,6 +624,7 @@
     <Content Include="Content\Logo\FrLogo.png" />
     <Content Include="Content\Logo\PCSlogo.png" />
     <Content Include="Content\Logo\PCSlogoFooter.png" />
+    <Content Include="Content\Member\About2.jpeg" />
     <Content Include="Content\Member\Akhtar Ali bandeshah.jpeg" />
     <Content Include="Content\Member\Farhan Faisal.jpeg" />
     <Content Include="Content\Member\Faridullah Khan.jpeg" />
@@ -658,6 +659,7 @@
     <Content Include="Content\Slider\Slide1.jpeg" />
     <Content Include="Content\Slider\Slide2.jpeg" />
     <Content Include="Content\Slider\Slide3.jpeg" />
+    <Content Include="Content\Slider\Slide4.jpeg" />
     <Content Include="Content\Slider\Sumer.jpg" />
     <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />
@@ -732,6 +734,7 @@
     <Content Include="Views\Main\PSIC.cshtml" />
     <Content Include="Views\Main\PCS.cshtml" />
     <Content Include="Views\Main\ScientificSession.cshtml" />
+    <Content Include="Views\Main\WorkShop.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

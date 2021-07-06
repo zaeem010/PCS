@@ -244,4 +244,5 @@ body.nav-expanded {
 .rs-menu.rs-menu-close,
 .sidebar_nav.navbar-inverse{
   background: transparent;
+  width:max-content;
 }
