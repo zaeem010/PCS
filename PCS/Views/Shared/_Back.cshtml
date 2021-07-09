@@ -68,11 +68,11 @@
             right: 0;
             width: 100%;
             height: 100%;
-            
         }
-   .fn{
-       font-size:12px;
-   }
+
+        .fn {
+            font-size: 12px;
+        }
     </style>
 </head>
 <body class="defult-home">
@@ -100,7 +100,7 @@
                         <div class="toolbar-sl-share">
                             <ul>
                                 @*<li class="opening"> <i class="flaticon-clock"></i> Mon - Fri: 9:00 am - 06.00pm / Closed on Weekends</li>*@
-                                <li class="pull-right"><a href="#"><img src="~/Content/Login.png" alt="" style="width:40px"/></a></li>
+                                <li class="pull-right"><a href="#"><img src="~/Content/Login.png" alt="" style="width:40px" /></a></li>
                             </ul>
                         </div>
                     </div>
@@ -114,13 +114,6 @@
             <div class="menu-area menu-sticky">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-12">
-                            <div class="" style="margin-top:4px">
-                                <a href="@Url.Action("Index","Main")">
-                                    <img src="~/Content/Logo/FrLogo.png" alt="logo" >
-                                </a>
-                            </div>
-                        </div>
                         <div class="col-lg-12" style="margin-top:-17px">
                             <div class="rs-menu-area">
                                 <div class="main-menu">
@@ -130,63 +123,15 @@
                                         </a>
                                     </div>
                                     <nav class="rs-menu pr-65">
-                                        <ul class="nav-menu">
-                                            <li class="menu-item-has-children">
-                                                <a href="@Url.Action("Index","Aboutus")" class="fn">About Us</a>
-                                                <ul class="sub-menu">
+                                        <ul id="onepage-menu" class="nav-menu">
+                                            <li class="">
+                                                <a href="@Url.Action("Index","Aboutus")" class="fn">Registerd Peopels</a>
+                                                @*<ul class="sub-menu">
                                                     <li><a href="@Url.Action("Index","Aboutus")#rs-team"> About Us</a></li>
 
-                                                </ul>
+                                                </ul>*@
                                             </li>
-                                            <li class="menu-item-has-children">
-                                                <a href="@Url.Action("Index","Main")#rs-team" class="fn">Orgranizers</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="@Url.Action("Index","Main")#rs-team"> organizing Committee</a></li>
-
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item-has-children">
-                                                <a href="@Url.Action("Index","Main")#rs-Part" class="fn">Partners</a>
-                                                <ul class="sub-menu">
-                                                    <li class="last-item"><a href="@Url.Action("Index","Main")#rs-Part">Partners</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item-has-children">
-                                                <a href="@Url.Action("Index","Main")#rs-faculty" class="fn">Faculties</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="@Url.Action("Index","Main")#rs-faculty"> National Faculty</a></li>
-                                                    <li><a href="@Url.Action("Index","Main")#rs-Infaculty"> International Faculty</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item-has-children">
-                                                <a href="#" class="fn">Council</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="@Url.Action("PCS","Main")"> PCS Council</a></li>
-                                                    <li><a href="@Url.Action("PSIC","Main")"> PCIS Council</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item-has-children">
-                                                <a href="#" class="fn">Programme</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="@Url.Action("Index","Main")#rs-live"> Live Sessions</a></li>
-                                                    <li class="last-item"><a href="@Url.Action("ScientificSession","Main")"> Scientific Sessions</a></li>
-                                                    <li class="last-item"><a href="#">Live Cases</a></li>
-                                                    <li class="last-item"><a href="@Url.Action("WorkShop","Main")">WorkShops</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item-has-children">
-                                                <a href="#" class="fn">Sponsers/Tariff</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="@Url.Action("Index","Main")#rs-sponser"> Sponsers</a></li>
-                                                    <li><a href=""> Tariff</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="menu-item-has-children">
-                                                <a href="@Url.Action("Index","Register")" class="fn">Registration</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="@Url.Action("Index","Register")">Registration</a></li>
-                                                </ul>
-                                            </li>
+                                         
                                         </ul> <!-- //.nav-menu -->
                                     </nav>
                                 </div> <!-- //.main-menu -->
@@ -197,77 +142,19 @@
             </div>
             <!-- Menu End -->
             <!-- Canvas Menu start -->
-            
             <!-- Canvas Menu end -->
         </header>
         <!--Header End-->
     </div>
     <!--Full width header End-->
-
-    @RenderBody()
+    <div class="main-content"style="height:500px">
+        @RenderBody()
+    </div>
+    
 
     <!-- Footer Start -->
-    <footer id="rs-footer" class="rs-footer">
+    @*<footer id="rs-footer" class="rs-footer">
         <div class="container">
-            @*<div class="footer-newsletter">
-                    <div class="row y-middle">
-                        <div class="col-md-6 sm-mb-26">
-                            <h3 class="title white-color mb-0">Newsletter Subscribe</h3>
-                        </div>
-                        <div class="col-md-6 text-right">
-                            <form class="newsletter-form">
-                                <input type="email" name="email" placeholder="21stcardiologyupdate@gmail.com" required="">
-                                <button type="submit"><i class="fa fa-paper-plane"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>*@
-            <div class="footer-content pt-62 pb-79 md-pb-64 sm-pt-48">
-                <div class="row">
-                    <div class="col-lg-6 col-md-12 col-sm-12 footer-widget md-mb-39">
-                        <div class="about-widget pr-15">
-                            <div class="logo-part">
-                                <a href="@Url.Action("Index","Main")"><img src="~/Content/Logo/PCSlogoFooter.png" alt="Footer Logo"></a>
-                            </div>
-                            <p class="desc">Cardiology Conference 2021 will focus on most recent advancements in all aspects of cardiology.This year’s theme is “Updates on use of anti thrombotic/anticoagulants in cardiovascular diseases”. other aspects are Cardiovascular diseases Pediatric Cardiology, Stem Cell Research and Regeneration on Cardiology, Heart Transplantation, Intervention Cardiology and Radiology, includes prompt keynote presentation, Speaker presentations, Poster presentation and exhibitions to gain more information and meet leading Cardiology researchers and potential investigators and get recognition at this 3-day event.</p>
-                            <div class="btn-part">
-                                <a class="readon" href="@Url.Action("Index","Aboutus")">About Us</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 md-mb-32 footer-widget">
-                        <h4 class="widget-title">Contact Info</h4>
-                        <ul class="address-widget pr-40">
-                            <li>
-                                <i class="flaticon-location"></i>
-                                <div class="desc">
-                                    Murree
-                                    Hotel Pearl Continental Bhurban
-                                </div>
-                            </li>
-                            <li>
-                                <i class="flaticon-call"></i>
-                                <div class="desc">
-                                    <a href="tel:03025551981">03025551981</a>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="flaticon-email"></i>
-                                <div class="desc">
-                                    <a href="mailto:cardiologyupdate21@gmail.com">cardiologyupdate21@gmail.com</a>
-                                </div>
-                            </li>
-                            @*<li>
-                                    <i class="flaticon-clock"></i>
-                                    <div class="desc">
-                                        10:00 - 17:00
-                                    </div>
-                                </li>*@
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
             <div class="footer-bottom">
                 <div class="row y-middle">
                     <div class="col-lg-6 col-md-8 sm-mb-21">
@@ -284,7 +171,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer>*@
     <!-- Footer End -->
     <!-- start scrollUp  -->
     <div id="scrollUp">
