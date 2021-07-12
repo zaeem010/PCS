@@ -23,6 +23,11 @@ namespace PCS.Controllers
             Registration.Total = 0;
             return View(Registration);
         }
+        public ActionResult All()
+        {
+            var List = _context.Registration.ToList();
+            return View(List);
+        }
         [HttpPost]
         public ActionResult Save(Registration Registration)
         {
