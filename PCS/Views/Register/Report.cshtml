@@ -1,0 +1,114 @@
+﻿@model PCS.Models.Registration
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Report</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="text-center">Detailed Summary</h3>
+                <a class="pull-right btn btn-primary" onclick="window.print();">Print</a>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th colspan="2" class="text-center">Detailed</th>
+                        </tr>
+                        <tr>
+                            <td style="width:150px"><b>Name</b></td>
+                            <td>@Model.Title @Model.Name</td>
+                        </tr>
+                        <tr>
+                            <td><b>CNIC</b></td>
+                            <td>@Model.Cnic</td>
+                        </tr>
+                        <tr>
+                            <td><b>Designation</b></td>
+                            <td>@Model.Designation</td>
+                        </tr>
+                        <tr>
+                            <td><b>Hospital Name</b></td>
+                            <td>@Model.HosName</td>
+                        </tr>
+                        <tr>
+                            <td><b>Prefered Email</b></td>
+                            <td>@Model.PreEmail</td>
+                        </tr>
+                        <tr>
+                            <td><b>Email</b></td>
+                            <td>@Model.Email</td>
+                        </tr>
+                        <tr>
+                            <td><b>Hospital Telephone</b></td>
+                            <td>@Model.HospTel</td>
+                        </tr>
+                        <tr>
+                            <td><b>Clinic Telephone</b></td>
+                            <td>@Model.ClinicTel</td>
+                        </tr>
+                        <tr>
+                            <td><b>Rescue Telephone</b></td>
+                            <td>@Model.ResTel</td>
+                        </tr>
+                        <tr>
+                            <td><b>Mobile</b></td>
+                            <td>@Model.Mobile</td>
+                        </tr>
+                        <tr>
+                            <td><b>PMDC</b></td>
+                            <td>@Model.Pmdc</td>
+                        </tr>
+                        <tr>
+                            <td><b>Description</b></td>
+                            <td>@Model.Des</td>
+                        </tr>
+                        <tr>
+                            <td><b>Arrival Date</b></td>
+                            <td>@Model.Arrival</td>
+                        </tr>
+                        <tr>
+                            <td><b>Departure Date</b></td>
+                            <td>@Model.Departure</td>
+                        </tr>
+                        <tr>
+                            <td><b>Nights</b></td>
+                            <td>@Model.Night</td>
+                        </tr>
+                        <tr>
+                            <td><b>Rooms</b></td>
+                            <td>@Model.Room</td>
+                        </tr>
+                        <tr>
+                            <td><b>Fee</b></td>
+                            <td>@Model.fee</td>
+                        </tr>
+                        <tr>
+                            <td><b>Hotel</b></td>
+                            <td>@Model.Hotel</td>
+                        </tr>
+                        <tr>
+                            <td><b>Total</b></td>
+                            <td>@Model.Total</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+        </div>
+    </div>
+</body>
+</html>

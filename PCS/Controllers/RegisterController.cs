@@ -23,6 +23,11 @@ namespace PCS.Controllers
             Registration.Total = 0;
             return View(Registration);
         }
+        public ActionResult All()
+        {
+            var List = _context.Registration.ToList();
+            return View(List);
+        }
         [HttpPost]
         public ActionResult Save(Registration Registration)
         {
@@ -30,6 +35,11 @@ namespace PCS.Controllers
             _context.SaveChanges();
             TempData["Insert"] = "Submitted Successfully...";
             return RedirectToAction("Index");
+        }
+        public ActionResult Report(int id)
+        {
+            var list = _context.Registration.SingleOrDefault(c=>c.id == id);
+            return View(list);
         }
     }
 }
