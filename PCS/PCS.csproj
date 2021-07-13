@@ -169,6 +169,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AboutusController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\FacultyController.cs" />
     <Compile Include="Controllers\HomeBackController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MainController.cs" />
@@ -622,6 +623,10 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\FacultyIn\1.jpeg" />
+    <Content Include="Content\FacultyIn\2.jpeg" />
+    <Content Include="Content\FacultyIn\3.jpeg" />
+    <Content Include="Content\FacultyIn\4.jpeg" />
     <Content Include="Content\FinalLogo\ACC.png" />
     <Content Include="Content\FinalLogo\APSC.png" />
     <Content Include="Content\FinalLogo\ESC.png" />
@@ -781,6 +786,7 @@
     <Content Include="Views\HomeBack\Login.cshtml" />
     <Content Include="Views\Register\All.cshtml" />
     <Content Include="Views\Register\Report.cshtml" />
+    <Content Include="Views\Faculty\InterNational.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
