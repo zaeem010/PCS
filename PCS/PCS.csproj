@@ -207,6 +207,7 @@
     <Compile Include="Models\Registration.cs" />
     <Compile Include="Models\Session.cs" />
     <Compile Include="Models\UserLogin.cs" />
+    <Compile Include="Models\Views\SessionVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -702,6 +703,11 @@
     <Content Include="Content\PSICMem\Tahir Saghir.jpeg" />
     <Content Include="Content\PSICMem\Tariq Ashraf.jpeg" />
     <Content Include="Content\PSICMem\Zubair Akram.jpeg" />
+    <Content Include="Content\RichTextArea\all_plugins.js" />
+    <Content Include="Content\RichTextArea\patch.js" />
+    <Content Include="Content\RichTextArea\rte.js" />
+    <Content Include="Content\RichTextArea\rte_theme_default.css" />
+    <Content Include="Content\RichTextArea\style.css" />
     <Content Include="Content\Slider\Cath.jpg" />
     <Content Include="Content\Slider\PC.jpg" />
     <Content Include="Content\Slider\Slide1.jpeg" />
@@ -798,10 +804,10 @@
     <Content Include="Views\Register\Report.cshtml" />
     <Content Include="Views\Faculty\InterNational.cshtml" />
     <Content Include="Views\Sessions\Index.cshtml" />
+    <Content Include="Views\Sessions\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Scientific\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

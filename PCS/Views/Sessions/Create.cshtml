@@ -1,0 +1,49 @@
+﻿@model PCS.Models.Session
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Back.cshtml";
+}
+<link rel="stylesheet" href="~/Content/RichTextArea/style.css" />
+<link rel="stylesheet" href="~/Content/RichTextArea/rte_theme_default.css" />
+<script type="text/javascript" src="~/Content/RichTextArea/rte.js"></script>
+<script>RTE_DefaultConfig.url_base = 'richtexteditor'</script>
+<script type="text/javascript" src='~/Content/RichTextArea/all_plugins.js'></script>
+
+<h3 class="text-center">Create Scientific Sessions</h3>
+<div class="container">
+    <div class="white-bg">
+        <a href="@Url.Action("Index")" class="btn btn-primary pull-right">Index</a>
+        <div class="row">
+            @using (Html.BeginForm("Save","Sessions", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="col-md-4">
+                    <label>Name</label>
+                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control thresold-i", @type = "text" })
+                </div>
+                <div class="col-md-12" style="margin-top:20px">
+                    <label>Paste All Data From Word File</label>
+                    @Html.TextAreaFor(m => m.Desc, new { @class = "form-control thresold-i", id = "editor" ,@style="height:400px"})
+                </div>
+                <div class="col-md-12 offset-sm-4">
+                    @if (Model.id == 0)
+                    {
+                        <button type="submit" class="btn btn-primary col-md-2 pull-right" style="margin-top:30px" onclick="return confirm('Do you want to Save ..')"><i class="fa fa-plus"></i> Save</button>
+                    }
+                    else
+                    {
+                        <button type="submit" class="btn btn-primary col-md-2 " style="margin-top:30px" onclick="return confirm('Do you want to Update..')"><i class="fa fa-plus"></i> Update</button>
+                    }
+                </div>
+                <br />
+                <br />
+                @Html.HiddenFor(m=>m.id)
+            }
+        </div>
+
+    </div>
+</div>
+<script>
+    var editor1 = new RichTextEditor("#editor");
+</script>
+<script src="~/Content/RichTextArea/patch.js"></script>

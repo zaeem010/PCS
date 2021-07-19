@@ -37,7 +37,8 @@ namespace PCS.Controllers
         }
         public ActionResult ScientificSession()
         {
-            return View();
+            var List = _context.Session.ToList();
+            return View(List);
         }
         public ActionResult WorkShop()
         {
