@@ -24,6 +24,7 @@ namespace PCS.Models
         public DbSet<InNationalFaculty> InNationalFaculty { get; set; }
         public DbSet<Registration> Registration { get; set; }
         public DbSet<UserLogin> UserLogin { get; set; }
+        public DbSet<Session> Session { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

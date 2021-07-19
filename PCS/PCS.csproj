@@ -191,12 +191,21 @@
     <Compile Include="Migrations\202107120813380_tblUserLogin.Designer.cs">
       <DependentUpon>202107120813380_tblUserLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202107190828431_tblSession.cs" />
+    <Compile Include="Migrations\202107190828431_tblSession.Designer.cs">
+      <DependentUpon>202107190828431_tblSession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107190830070_tblSession1.cs" />
+    <Compile Include="Migrations\202107190830070_tblSession1.Designer.cs">
+      <DependentUpon>202107190830070_tblSession1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\NationalFaculty.cs" />
     <Compile Include="Models\Registration.cs" />
+    <Compile Include="Models\Session.cs" />
     <Compile Include="Models\UserLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -816,6 +825,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202107120813380_tblUserLogin.resx">
       <DependentUpon>202107120813380_tblUserLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107190828431_tblSession.resx">
+      <DependentUpon>202107190828431_tblSession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107190830070_tblSession1.resx">
+      <DependentUpon>202107190830070_tblSession1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
